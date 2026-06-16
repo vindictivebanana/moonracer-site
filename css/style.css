@@ -1,0 +1,282 @@
+:root {
+    --sage: #718c77;
+    --blue: #7e95ae;
+    --lavender: #9186b4;
+    --cream: #faf8f5;
+    --sand: #ece7de;
+    --text: #2d3436;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--sage);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #5d7562;
+    transform: translateY(-2px);
+}
+
+.card, .service-card, .step {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.card:hover, .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.09);
+}
+
+.page-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../assets/moon-phases.jpg') center/cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.navbar {
+    background: var(--white);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover, nav a.active {
+    color: var(--sage);
+}
+
+footer {
+    background: var(--sand);
+    padding: 4rem 0;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+footer h3, footer h4 {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+footer p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Homepage Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 5rem 0;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Homepage Services Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 0 6rem 0;
+}
+
+/* Executive Functioning Layout */
+.ef-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+}
+
+.process {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step h3 {
+    color: var(--lavender);
+    margin-bottom: 0.5rem;
+}
+
+.sticky-sidebar {
+    position: sticky;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: max-content;
+}
+
+.cat-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+/* Home & School Layout */
+.split-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 6rem;
+}
+
+.split-cards h2 {
+    color: var(--blue);
+    margin-bottom: 1.5rem;
+}
+
+.split-cards ul {
+    padding-left: 1.25rem;
+}
+
+.split-cards li {
+    margin-bottom: 0.75rem;
+}
+
+/* Meet Laura Layout */
+.about {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    align-items: start;
+}
+
+.bio h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.bio p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 968px) {
+    .hero, .ef-layout, .split-cards, .about {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    nav {
+        gap: 1rem;
+    }
+    .hero {
+        padding: 3rem 0;
+    }
+    .hero img {
+        order: -1;
+    }
+}
