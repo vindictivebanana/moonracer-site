@@ -154,6 +154,16 @@ footer p {
     margin-bottom: 0.5rem;
 }
 
+.headshot {
+    width: 100%;
+}
+
+.headshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Homepage Hero */
 .hero {
     display: grid;
